@@ -30,14 +30,18 @@ namespace BestOil
         {
             if (radioButtonLitr.Checked)
             {
-                LitrtextBox.ReadOnly = false;
+               LitrtextBox.ReadOnly = false;
                 MoneyTextBox.ReadOnly = true;
+
+               
+                
 
             }
             else
             {
                 LitrtextBox.ReadOnly = true;
                 MoneyTextBox.ReadOnly = false;
+                
             }
         }
 
@@ -89,56 +93,29 @@ namespace BestOil
             
         }
 
-        private void textBox5_TextChanged(object sender, EventArgs e)
+       
+
+        private void TextBoxCafe_TextChanged(object sender, EventArgs e)
         {
-            float total=0;
+            float total = 0;
             foreach (TextBox item in PanelTextBoxes.Controls)
             {
-                if(item.Tag==textBox5.Tag)
-                    total = (float.Parse(item.Text) * float.Parse(textBox5.Text));
+                if (item.Tag == (sender as TextBox).Tag)
+                    total = (float.Parse(item.Text) * float.Parse((sender as TextBox).Text));
             }
             totalAmount += total;
             TotalAmountCafe.Text = totalAmount.ToString();
         }
 
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-            float total = 0;
-            foreach (TextBox item in PanelTextBoxes.Controls)
-            {
-                if (item.Tag == textBox6.Tag)
-                    total = (float.Parse(item.Text) * float.Parse(textBox6.Text));
-            }
-            totalAmount += total;
-            TotalAmountCafe.Text = totalAmount.ToString();
-        }
 
-        private void textBox8_TextChanged(object sender, EventArgs e)
-        {
-            float total = 0;
-            foreach (TextBox item in PanelTextBoxes.Controls)
-            {
-                if (item.Tag == textBox8.Tag)
-                    total = (float.Parse(item.Text) * float.Parse(textBox8.Text));
-            }
-            totalAmount += total;
-            TotalAmountCafe.Text = totalAmount.ToString();
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-            float total = 0;
-            foreach (TextBox item in PanelTextBoxes.Controls)
-            {
-                if (item.Tag == textBox7.Tag)
-                    total = (float.Parse(item.Text) * float.Parse(textBox7.Text));
-            }
-            totalAmount += total;
-            TotalAmountCafe.Text = totalAmount.ToString();        
-        }
-
+        
         private void Calculate_Click(object sender, EventArgs e)
         {
+            if (TotalAmountPetrol.Text == null && TotalAmountCafe.Text==null)
+            {
+                TotalAmountPetrol.Text = "0.0";
+                TotalAmountCafe.Text = "0.0";
+            }
             AllAmount.Text=(float.Parse(TotalAmountPetrol.Text)+float.Parse(TotalAmountCafe.Text)).ToString();
             MessageBox.Show($"You should pay {AllAmount.Text}, Good Bye");
         }

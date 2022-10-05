@@ -339,7 +339,7 @@
             this.textBox5.Size = new System.Drawing.Size(58, 23);
             this.textBox5.TabIndex = 7;
             this.textBox5.Tag = "HotDog";
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.textBox5.TextChanged += new System.EventHandler(this.TextBoxCafe_TextChanged);
             this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPricePetrol_KeyPress);
             // 
             // textBox6
@@ -350,7 +350,6 @@
             this.textBox6.Size = new System.Drawing.Size(58, 23);
             this.textBox6.TabIndex = 7;
             this.textBox6.Tag = "Gamburger";
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPricePetrol_KeyPress);
             // 
             // textBox8
@@ -361,7 +360,7 @@
             this.textBox8.Size = new System.Drawing.Size(58, 23);
             this.textBox8.TabIndex = 7;
             this.textBox8.Tag = "Free";
-            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
+            this.textBox8.TextChanged += new System.EventHandler(this.TextBoxCafe_TextChanged);
             this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPricePetrol_KeyPress);
             // 
             // PriceCafe
@@ -460,7 +459,7 @@
             this.textBox7.Size = new System.Drawing.Size(58, 23);
             this.textBox7.TabIndex = 7;
             this.textBox7.Tag = "Cola";
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.textBox7.TextChanged += new System.EventHandler(this.TextBoxCafe_TextChanged);
             this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPricePetrol_KeyPress);
             // 
             // textBox4
